@@ -11,6 +11,7 @@ import { WeatherService } from 'src/app/services/weather.service';
 })
 export class WeatherReportComponent implements OnInit {
   data$!: Observable<WeatherData>;
+
   today: Date = new Date();
 
   loading = false;
@@ -31,5 +32,6 @@ export class WeatherReportComponent implements OnInit {
         this.loading = false;
       })
     );
+    console.log(this.data$);
   }
 }
